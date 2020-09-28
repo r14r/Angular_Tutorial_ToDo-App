@@ -1,0 +1,59 @@
+<main role="main" class="container">
+
+	<div>
+
+		<div class="row border bg-light">
+			<div class="col-sm">
+				<h1 class="text-center text-primary">Todo App</h1>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm">&nbsp;</div>
+		</div>
+
+		<div class="row border">
+			<div class="col-sm">Custom Input</div>
+			<div class="col-sm">Predefined Values</div>
+			<div class="col-sm">Todo List</div>
+		</div>
+		<div class="row border bg-light">
+			<div class="col-sm">
+				<form>
+					<div class="form-group">
+
+						<div class="input-group-prepend">
+							<input #todo type="text" class="form-control" placeholder="Add Todo" name="todo" ngModel>
+
+							<span class="input-group-text NOcurl-top-right NO-glow-on-hover"
+								(click)="addItem(todo.value)"><i class="material-icons icon-blue">add</i></span>
+						</div>
+
+					</div>
+				</form>
+			</div>
+			<div class="col-sm">
+				<div class="preselect-group-text" (click)="addItem('Learning', 'Essential for success')">
+					Learning<br>
+					<small>Essential for success</small>
+				</div>
+				<div class="preselect-group-text" (click)="addItem('Working', 'But not to hard')">Working<br>
+					<small>But not to hard</small></div>
+				<div class="preselect-group-text" (click)="addItem('Traveling', 'Explore the World')">Traveling<br>
+					<small>Explore the World}</small></div>
+			</div>
+			<div class="col-sm">
+				<div class="data">
+					<ul>
+						<li [@moveInTeaseOut] *ngFor="let todo of todoArray">
+							{{todo.name}}<br>
+							<small>{{ todo.desc }}</small>
+							<i (click)="deleteItem(todo)" class="material-icons">delete</i>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</main>

@@ -1,0 +1,15 @@
+#!/usr/local/bin/bash
+
+set -u
+
+DST=/Users/Shared/SERVER/Share_Web/via-internet.de/subdomains/playground/angular/todoapp
+# ng build --prod --base-href=/angular/todoapp
+ng build --prod --output-path www --base-href /angular/todoapp/
+
+echo Remove destinaton: $DST
+rm -rf $DST
+
+echo Copy files to destination: $DST
+cp -R dist/app $DST
+
+

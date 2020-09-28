@@ -1,0 +1,23 @@
+{
+  "editor.formatOnSave": true,
+  "files.exclude": {
+    ".env": true,
+    "**/*.spec.ts": true,
+    "e2e": true,
+    "browserslist": true,
+    "karma.conf.js": true,
+    "tsconfig.spec.json": true,
+    "src/favicon.ico": true,
+    "tsconfig.app.json": true,
+    "src/polyfills.ts": true,
+    "src/environments": true,
+    "src/test.ts": true,
+    ".gitignore": true,
+    ".envrc": true,
+    ".editorconfig": true,
+    "src/main.ts": true,
+    "src/styles.scss": true,
+    ".vscode": true,
+    "node_modules": true
+  }
+}
